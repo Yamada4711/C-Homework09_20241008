@@ -19,3 +19,32 @@ void InputANum()
 {
 	answerNum = rand() % 10;
 }
+
+void JudgeNum()
+{
+	if (playerNum == answerNum)
+	{
+		cout << "³‰ðI" << endl;
+		clear = true;
+	}
+	else if (playerNum < answerNum)
+	{
+		cout << "³‰ð‚Í‚à‚Á‚Æ‘å‚«‚¢”‚Ì‚æ‚¤‚¾" << endl;
+	}
+	else
+	{
+		cout << "³‰ð‚Í‚à‚Á‚Æ¬‚³‚¢”‚Ì‚æ‚¤‚¾" << endl;
+	}
+	playerNum = -1;
+}
+
+void PlayKazuateGame()
+{
+	InputANum();
+
+	while (!clear)
+	{
+		InputPNum();
+		JudgeNum();
+	}
+}

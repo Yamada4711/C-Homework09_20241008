@@ -14,6 +14,7 @@ void PlayJankenGame()
 
 void InputHandP()
 {
+	janken[1].hand = -1;
 	while (!(janken[1].hand >= 0 && janken[1].hand <= 2))
 	{
 		cout << "Ÿ‚ÌO‚Â‚Ì‚¤‚¿‚©‚çˆê‚Â‘I‚ñ‚Å‚­‚¾‚³‚¢B" << flush

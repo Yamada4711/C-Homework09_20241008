@@ -1,8 +1,10 @@
 #ifndef KAZUATE_H_20241008_1546_
 #define KAZUATE_H_20241008_1546_
 
-int playerNum;
-int answerNum;
+static int playerNum = -1;
+static int answerNum;
+
+static bool clear = false;
 
 static void InputPNum();
 
