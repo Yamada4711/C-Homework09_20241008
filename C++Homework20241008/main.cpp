@@ -39,6 +39,8 @@ int main()
 		{
 			PlayKazuateGame();
 		}
+
+		gameNum = -1;
 		
 		cout << endl;
 
@@ -49,7 +51,6 @@ int main()
 			cout << "ƒQ[ƒ€‚ðI—¹‚µ‚Ü‚·" << endl;
 			quit = true;
 		}
-		gameNum = -1;
 
 		cout << endl;
 	}

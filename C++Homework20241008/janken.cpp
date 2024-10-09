@@ -6,8 +6,8 @@ Janken janken[2];
 
 void PlayJankenGame()
 {
-	InputHandP();
 	InputHandD();
+	InputHandP();
 	JudgeHand();
 	ShowWinner();
 }
@@ -30,6 +30,18 @@ void InputHandP()
 void InputHandD()
 {
 	janken[0].hand = rand() % 3;
+
+#define DEBUG
+
+#ifdef DEBUG
+
+	cout << endl;
+	cout << "<<デバッグ>> 相手の手がグーなら0、チョキなら1、パーなら2が表示されます" << endl;
+	cout << janken[0].hand << endl;
+	cout << endl;
+
+#endif // DEBUG
+
 }
 
 void JudgeHand()

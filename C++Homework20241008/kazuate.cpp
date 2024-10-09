@@ -4,6 +4,7 @@ using namespace std;
 
 void InputPNum()
 {
+	playerNum = -1;
 	while (!(playerNum >= 0 && playerNum <= 9))
 	{
 		cout << "0 ～ 9 までのいずれかの数字を入力してください > " << flush;
@@ -18,6 +19,17 @@ void InputPNum()
 void InputANum()
 {
 	answerNum = rand() % 10;
+
+#define DEBUG
+
+#ifdef DEBUG
+
+	cout << endl;
+	cout << "<<デバッグ>> 正解の数字は " << answerNum << " です" << endl;
+	cout << endl;
+
+#endif // DEBUG
+
 }
 
 void JudgeNum()
@@ -35,7 +47,6 @@ void JudgeNum()
 	{
 		cout << "正解はもっと小さい数のようだ" << endl;
 	}
-	playerNum = -1;
 }
 
 void PlayKazuateGame()
@@ -47,4 +58,5 @@ void PlayKazuateGame()
 		InputPNum();
 		JudgeNum();
 	}
+	clear = false;
 }
